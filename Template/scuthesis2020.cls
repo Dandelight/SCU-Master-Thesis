@@ -69,8 +69,8 @@
 % 引入算法包
 \RequirePackage{algorithm}
 \RequirePackage{algorithmic}
-\floatname{algorithm}{算法}  
-\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
 
 % 此包用于双语图表标题
@@ -93,7 +93,7 @@
 % 这一段将heiti重新设置，避免对黑体加粗
 % 参考https://www.zhihu.com/question/58456658
 \let\heiti\relax
-\newCJKfontfamily\heiti{黑体}[BoldFont=黑体]
+\newCJKfontfamily\heiti{SimHei}[BoldFont=SimHei]
 
 % 解决Font shape `U/rsfs/m/n' in size <16.06> not available 的问题
 % 参考 https://tex.stackexchange.com/questions/58087/how-to-remove-the-warnings-font-shape-ot1-cmss-m-n-in-size-4-not-available
@@ -262,7 +262,7 @@
 % 			{\makebox[2.2cm][s]{\textbf{送审编号：}}}       & \hspace{-10pt}\textbf{\@STUnumber}
 % 			\makesecret
 % 		\end{tabular}
-		
+
 % 	}{}
 % \ \\[28pt]
 }
@@ -300,8 +300,8 @@
 % \begin{tabular}{lc}
 % 	{
 % 		\heiti \zihao{3} {\textbf{题目} }
-% 	}  
-% 	& 
+% 	}
+% 	&
 
 % 	\vspace{25pt}
 % 	\ifthenelse{\equal{\@CoverSubTitle}{}}{}{
@@ -313,9 +313,9 @@
 	\heiti \zihao{3} {\textbf{题目：}} &  \multicolumn{3}{c}{
 		\hspace{-0.7 cm} \fillinblank{11.38 cm}{\heiti\zihao{3}\textbf{\@CoverTitle}}
 	} \\[23pt]
-	\heiti \zihao{3} {\textbf{作者：}} & \hspace{-0.7 cm} \fillinblank{2.5 cm}{\heiti\zihao{3}\textbf{\@author}}    
-	& \heiti \zihao{3} {\textbf{完成日期：}}     
-	& \hspace{-0.7 cm} \fillinblank{5.5 cm}{\heiti\zihao{3}\textbf{\@completedate}}     
+	\heiti \zihao{3} {\textbf{作者：}} & \hspace{-0.7 cm} \fillinblank{2.5 cm}{\heiti\zihao{3}\textbf{\@author}}
+	& \heiti \zihao{3} {\textbf{完成日期：}}
+	& \hspace{-0.7 cm} \fillinblank{5.5 cm}{\heiti\zihao{3}\textbf{\@completedate}}
 \end{tabular}
 
 \vspace{45pt}
@@ -325,7 +325,7 @@
 {
 %非送审版本
 \ifthenelse{\equal{\approval}{0}}{
-	
+
 	\begin{tabular}{cc}
 		{\hspace{-0.7cm}\fontq\makebox[4cm][s]{培养单位：}}  & \hspace{-0.7cm}\fonta\fillinblank{8cm}{\@school}
 		\\[23pt]
@@ -610,7 +610,7 @@
 		\makescucoverimage
 
 		\vspace*{1.5cm}
-		
+
 		%封面论文标题
 		\makescucovertitle
 
@@ -633,7 +633,7 @@
 	% 删除英文封面
 	% \begin{ENGinner}
 	% \end{ENGinner}
-	
+
 	% 中文声明
 	{
 		\cleardoublepage
@@ -645,13 +645,13 @@
 		\thispagestyle{empty}
 
 		本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。据我所知，除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得四川大学或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。
-		
+
     	本学位论文成果是本人在四川大学读书期间在导师指导下取得的，论文成果归四川大学所有，特此声明。
 
 		\autograph
-		
+
 		\vspace*{10mm}
-		
+
 		\begin{center}
 			\bf \large 学位论文使用授权书
 		\end{center}
@@ -660,7 +660,7 @@
 		本学位论文作者完全了解四川大学有关保留、使用学位论文的规定，同意学校保留并向国家有关部门或相关机构送交论文的原件、复印件和电子版，允许论文被查阅和借阅。本人授权四川大学将本学位论文的全部或部分内容编入有关数据库进行信息技术服务，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文，并用于学术活动。
 
 		（涉密学位论文在解密后适用于本授权书）
-		
+
 
 		\autograph
 	}
@@ -706,7 +706,7 @@
 	\vspace*{0.1cm}
 	\begin{flushright}
 		年 \quad 月 \quad 日 \hspace*{3em}
-	\end{flushright} 
+	\end{flushright}
 }
 
 \newenvironment{ENGinner}
@@ -766,7 +766,7 @@
 % 定义英文摘要环境
 \newenvironment{ENGabstract}
 {
-%按照学位要求，修改英文摘要 
+%按照学位要求，修改英文摘要
 \parskip 10pt
 \baselineskip 20pt \thispagestyle{empty} \vspace*{0.2cm}
 \begin{center}{\bf \large \@ENGtitle}
@@ -775,7 +775,7 @@
 {\bf Major:} \@ENGmajor \\
 \ifthenelse{\equal{\approval}{0}}{
 	\vspace{0.2cm} {\bf Graduate Student:} \@ENGauthor  \qquad {\bf
-	Supervisor:} \@ENGsupervisor 
+	Supervisor:} \@ENGsupervisor
 }{}
 }
 \end{center} \vspace{0.4cm}
@@ -803,14 +803,14 @@
 
 % 定义致谢环境
 \newenvironment{thanks*}
-{	
+{
 	% \makefancyhf{致谢}
 	\chapter{致\hspace{1em}谢}
-	
+
 }{}
 
 % 设置章编号为汉字编号
-\ctexset{ 
+\ctexset{
 	chapter = {
 		name = {第,章},
 		number = \chinese{chapter},
@@ -884,7 +884,7 @@
 \crefrangemultiformat{algorithm}{算法~#3#1#4~-~#5#2#6}{和算法~#3#1#4~-~#5#2#6}{,~算法~#3#1#4~-~#5#2#6}{和算法~#3#1#4~-~#5#2#6}
 \Crefrangemultiformat{algorithm}{算法~#3#1#4~-~#5#2#6}{和算法~#3#1#4~-~#5#2#6}{,~算法~#3#1#4~-~#5#2#6}{和算法~#3#1#4~-~#5#2#6}
 
-% 在句子中，直接使用 (1) 
+% 在句子中，直接使用 (1)
 \crefformat{equation}{\textup{#2(#1)#3}}
 \crefrangeformat{equation}{\textup{#3(#1)#4--#5(#2)#6}}
 \crefmultiformat{equation}{\textup{#2(#1)#3}}{ 和 \textup{#2(#1)#3}}
@@ -952,20 +952,20 @@
 \newlistof{todo}{todos}{\listtodoname}
 % 不显示待办事项时，相关命令直接为空
 \ifthenelse{\equal{\todoListShow}{0}}{
-\newcommand{\todo}[1]{% 
+\newcommand{\todo}[1]{%
 }
-\newcommand{\showToDoListPage}{% 
+\newcommand{\showToDoListPage}{%
 }
 }{}
 % 显示待办事项时，生成待办事项
 \ifthenelse{\equal{\todoListShow}{1}}{
 \newcommand{\todo}[1]{%
 \refstepcounter{todo}
-{ \color{red} 
+{ \color{red}
 \par\noindent  \textbf{TODO \thetodo. #1}
 }
 \addcontentsline{todos}{todo}{\protect\numberline{\thetodo}#1}\par}
-\newcommand{\showToDoListPage}{% 
+\newcommand{\showToDoListPage}{%
 \newpage
 \listoftodo
 }
